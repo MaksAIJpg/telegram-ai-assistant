@@ -2,3 +2,4 @@ python-telegram-bot==20.7
 python-dotenv
 git+https://github.com/openai/whisper.git
 torch
+openai-whisper
