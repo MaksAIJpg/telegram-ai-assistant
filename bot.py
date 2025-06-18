@@ -53,12 +53,14 @@ async def handle_voice(update: Update, context: ContextTypes.DEFAULT_TYPE):
     await update.message.reply_text(f"🗣 Расшифровка: {text}")
     await update.message.reply_text(f"💬 Ответ: {reply}")
 
-async def main():
+if __name__ == "__main__":
     app = ApplicationBuilder().token(TELEGRAM_TOKEN).build()
 
     app.add_handler(CommandHandler("start", start))
     app.add_handler(MessageHandler(filters.TEXT & ~filters.COMMAND, handle_text))
     app.add_handler(MessageHandler(filters.VOICE, handle_voice))
+
+    app.run_polling()
 
     await app.run_polling()
 
