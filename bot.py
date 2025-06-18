@@ -62,6 +62,3 @@ if __name__ == "__main__":
 
     app.run_polling()
 
-    await app.run_polling()
-
-
