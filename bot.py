@@ -55,7 +55,7 @@ async def handle_voice(update: Update, context: ContextTypes.DEFAULT_TYPE):
     )
     reply = response.choices[0].message["content"]
     await update.message.reply_text(f"🗣 Расшифровка: {text}")
-💬 Ответ: {reply}")
+await update.message.reply_text(f"💬 Ответ: {reply}")
 
 # Запуск бота
 async def main():
